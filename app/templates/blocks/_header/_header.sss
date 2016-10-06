@@ -1,0 +1,52 @@
+.header
+  display: block
+  background-color: #000000
+  height: 70px
+  &-box
+    transition: 0.5s ease
+    padding-top: 10px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+  &__logo
+    img
+      margin-bottom: 0
+  .header-menu
+    list-style: none
+    margin: 0
+    padding: 0
+    &__item
+      display: inline-block
+      margin-right: 50px
+      padding: 16px 1px 18px 1px
+      transition: 0.3s ease
+      &:last-child
+        margin-right: 0
+      &&-active
+        border-bottom: 3px solid #2b8bcf
+    &__link
+      font-size: 13px
+      font-weight: 600
+      text-align: center
+      color: #ffffff
+      text-transform: uppercase
+      &:hover
+        color: #2b8bcf
+  &__tel
+    margin-bottom: 10px
+    &-ico
+      size: 13px 14px
+      background-image: svg('phone-ico.svg', '[fill]: #ffffff')
+      background-position: 50% 50%
+      text-indent: -9999px
+      background-repeat: no-repeat
+      display: inline-block
+      overflow: hidden
+    &-link
+      font-size: 18px
+      font-weight: bold
+      text-align: right
+      color: #ffffff
+      &:hover
+        color: #2b8bcf

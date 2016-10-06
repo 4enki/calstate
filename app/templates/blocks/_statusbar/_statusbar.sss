@@ -1,0 +1,32 @@
+.statusbar
+  background-color: #222222
+  height: 30px
+  display: block
+  &-box
+    transition: 0.5s ease
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    padding-top: 3px
+  .statusbar-menu
+    list-style: none
+    margin: 0
+    padding: 0
+    &__item
+      display: inline-block
+      margin-right: 50px
+      padding: 0
+      transition: 0.3s ease
+      &:last-child
+        margin-right: 0
+    &__link
+      font-size: 11px
+      font-weight: 600
+      color: #f5f5f5
+      &:hover
+        color: #2b8bcf
+.location
+  &__text
+    font-size: 11px
+    color: #f5f5f5
