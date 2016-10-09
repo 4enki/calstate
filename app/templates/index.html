@@ -174,7 +174,7 @@
                 <div class="progress time notnow">0:50:00</div>
               </li><!-- /.page-list__item -->
 
-              <li class="page-list__item notnow">
+              <li class="page-list__item">
                 <a href="single2.html" class="link">Services single (Local moving)</a>
                 <span class="link__spacer">—</span>
                 <span class="link__file-name" title="app/templates/single2.html">single2.html</span>
@@ -186,7 +186,7 @@
                   <progress max="100" value="0"></progress>
                   <span class="progress_value">0%</span>
                 </div>
-                <div class="progress time">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
+                <div class="progress time notnow">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
               </li><!-- /.page-list__item -->
 
             </ul>
@@ -222,7 +222,7 @@
             <div class="progress time notnow">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
           </li><!-- /.page-list__item -->
 
-          <li class="page-list__item notnow">
+          <li class="page-list__item">
             <a href="blog.html" class="link">Blog</a>
             <span class="link__spacer">—</span>
             <span class="link__file-name" title="app/templates/blog.html">blog.html</span>
@@ -234,7 +234,7 @@
               <progress max="100" value="0"></progress>
               <span class="progress_value">0%</span>
             </div>
-            <div class="progress time">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
+            <div class="progress time notnow">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
           </li><!-- /.page-list__item -->
 
           <li class="page-list__item">
@@ -252,7 +252,7 @@
             <div class="progress time notnow">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
           </li><!-- /.page-list__item -->
 
-          <li class="page-list__item notnow">
+          <li class="page-list__item">
             <a href="special.html" class="link">Special Offers</a>
             <span class="link__spacer">—</span>
             <span class="link__file-name" title="app/templates/special.html">special.html</span>
@@ -264,10 +264,10 @@
               <progress max="100" value="0"></progress>
               <span class="progress_value">0%</span>
             </div>
-            <div class="progress time">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
+            <div class="progress time notnow">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
           </li><!-- /.page-list__item -->
 
-          <li class="page-list__item notnow">
+          <li class="page-list__item">
             <a href="faq.html" class="link">Faq</a>
             <span class="link__spacer">—</span>
             <span class="link__file-name" title="app/templates/faq.html">faq.html</span>
@@ -279,7 +279,7 @@
               <progress max="100" value="0"></progress>
               <span class="progress_value">0%</span>
             </div>
-            <div class="progress time">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
+            <div class="progress time notnow">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
           </li><!-- /.page-list__item -->
 
           <li class="page-list__item notnow">
@@ -364,14 +364,53 @@
       <h2>Исходники и структура папок и файлов</h2>
       <p>Исходный код: <a href="https://bitbucket.org/impcode/calstate" target="_blank">bitbucket.org/impcode/calstate</a>. Техническая информация в файле <code>README.md</code>.</p>
       <div class="foldable">
-        <div class="foldable__control"><span class="foldable__link link pseudo">Показать раскрывающийся контент</span></div>
+        <div class="foldable__control"><span class="foldable__link link pseudo">Показать стуктуру папок и файлов</span></div>
           <div class="foldable__content">
 <pre>
+</pre>
+          </div><!-- /.foldable__content -->
+        </div><!-- /.foldable-box -->
+
+      <h2>Тема для WordPress</h2>
+      <p>На основе свёрстанных страниц собрана тема для WordPress. Инструкция и техническая информация описаны в отдельном <a href="https://docs.google.com/document/d/1cGtWIn8TmHKl6G-dhtVBgBvPL3WqkEDejttLpdtQTU8/edit?usp=sharing" target="_blank">документе</a>.</p>
+      <div class="foldable">
+        <div class="foldable__control"><span class="foldable__link link pseudo">Показать стуктуру папок и файлов</span></div>
+          <div class="foldable__content">
+<pre>
+└── wordpress
+  ├── page-templates
+  ├── assets
+  ├── 404.php
+  ├── footer.php
+  ├── functions.php
+  ├── header.php
+  ├── index.php
+  ├── page.php
+  ├── single.php
+  └── style.css
 </pre>
           </div><!-- /.foldable__content -->
         </div><!-- /.foldable-box -->
       </div><!-- /.readme -->
 
     </div><!-- /.start-warp -->
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      // спойлер-блок на странице
+      $('.foldable__content').hide()
+        $('.foldable__control').click(function(){
+          $(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle();
+          if($(this).hasClass('folded')) {
+            $('.foldable__link').html('Свернуть стуктуру папок и файлов');
+          }
+          else {
+            $('.foldable__link').html('Показать стуктуру папок и файлов');
+          }
+      });
+      // /спойлер-блок на странице
+    });
+    </script>
   </body>
 </html>
