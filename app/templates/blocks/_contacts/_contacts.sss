@@ -12,6 +12,18 @@
     right: 0
     width: 50%
     min-width: 720px
+    text-align: center
+    &-close
+      cursor: pointer
+      background: transparent
+      border: 0
+      position: absolute
+      top: 20px
+      left: 20px
+      margin: 0
+      padding: 4px
+      display: block
+      size: 28px
   &__info-box
     position: absolute
     top: center
@@ -20,7 +32,69 @@
     width: 293px
     height: 294px
     display: block
+    padding: 15px
+    .adress
+      top: center
+      left: center
 #map
   width: 100%
   height: 500px
-  margin-left: -240px
+
+.i-cross
+  background-image: svg('close-icon.svg', '[fill]: #D4D4D4')
+  background-position: 50% 50%
+  text-indent: -9999px
+  background-repeat: no-repeat
+  size: 28px
+  display: block
+
+.adress
+  text-align: center
+  &__item
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+    &-subtitle
+      font-size: 16px
+      font-weight: bold
+      letter-spacing: 0.1px
+      color: #434342
+      text-transform: uppercase
+    &-text
+      font-size: 14px
+      letter-spacing: 0.1px
+      color: #434342
+      a
+        color: #434342
+        display: block
+
+.contacts-form-box
+  top: center
+  left: center
+  h2
+    font-size: 16px
+    font-weight: bold
+    line-height: 1.3
+    text-align: center
+    color: #333333
+    text-transform: uppercase
+    margin-bottom: 22px
+  .contacts-form
+    &__row
+      display: flex
+      justify-content: center
+    &__item
+      lost-column: 1/2 2 20px
+      display: block
+      text-align: center
+      margin-bottom: 1px
+      object-fit: contain
+    textarea.form-control
+      height: 154px
+      min-height: 154px
+      resize: none
+    .form-buttom
+      margin: 0 auto
+      font-size: 13px
+      width: 160px
+      height: 50px
