@@ -1,0 +1,98 @@
+.blog-page
+  lost-center: 770px
+  text-align: center
+  .blog__post
+    display: block
+    width: 770px
+    min-height: 210px
+    object-fit: contain
+    background-color: rgba(0, 0, 0, 0.6)
+    margin: 0 0 30px 0
+    background-attachment: scroll
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    &&1
+      background-image: inline('bg/blog1-bg.png')
+    &&2
+      background-image: inline('bg/blog2-bg.png')
+    &&3
+      background-image: inline('bg/blog3-bg.png')
+    &&4
+      background-image: inline('bg/blog4-bg.png')
+    &&5
+      background-image: inline('bg/blog5-bg.png')
+    &&6
+      background-image: inline('bg/blog6-bg.png')
+    &-header
+      top: center
+      left: 0
+      right: 0
+      h2
+        font-size: 22px
+        font-weight: 600
+        text-align: center
+        color: #ffffff
+        margin: 0
+    &-footer
+      position: absolute
+      bottom: 10px
+      left: 0
+      right: 0
+      .post-date
+        font-size: 11px
+        font-weight: bold
+        text-align: center
+        color: #ffffff
+  .blog-navigation
+    margin-top: 50px
+    display: block
+    .pagination
+      list-style: none
+      margin: 0
+      padding: 0
+      &__item
+        display: inline-block
+        margin-right: -4px
+        transition: 0.3s ease
+        background-color: #ffffff
+        padding: 2px 6px 2px 6px
+        &&-previous
+          margin-right: 4px
+        &&-next
+          margin-left: 8px
+          margin-right: 4px
+        &&-active
+          a
+            color: #2b8bcf
+        a,
+        span
+          font-size: 16px
+          font-weight: 600
+          letter-spacing: 0.1px
+          color: #d1d1d1
+        .ico-next,
+        .ico-previous
+          size: 8px 15px
+          background-position: 50% 50%
+          text-indent: -9999px
+          background-repeat: no-repeat
+          display: inline-block
+          overflow: hidden
+          position: relative
+          top: 2px
+        .ico-next
+          background-image: svg('right.svg', '[fill]: #625c5c')
+        .ico-previous
+          background-image: svg('left.svg', '[fill]: #625c5c')
+        .ico-last
+          size: 12px 15px
+          background-position: 50% 50%
+          text-indent: -9999px
+          background-repeat: no-repeat
+          display: inline-block
+          overflow: hidden
+          position: relative
+          top: 2px
+          background-image: svg('last.svg', '[fill]: #625c5c')
