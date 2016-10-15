@@ -14,4 +14,10 @@ $(document).ready(function() {
 
   $('select').niceSelect();
 
+  // спойлер-блок на странице faq
+  $('.faq-box').click(function(){
+    $(this).toggleClass("faq-box-open").toggleClass("faq-box-close").next().slideToggle();
+  });
+  // /спойлер-блок на странице faq
+
 });

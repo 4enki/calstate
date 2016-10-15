@@ -1,0 +1,145 @@
+.special
+  padding-top: 101px
+  &-col4
+    lost-column: 4/12 4 30px
+    margin-bottom: 30px
+  &-col8
+    lost-column: 8/12 8 30px
+    margin-bottom: 30px
+  .special__row
+    display: block
+    display: flex
+    flex: 1 1 auto
+    flex-wrap: wrap
+    &&-top
+      margin-bottom: 29px
+  &-box
+    background-color: #fff
+    display: block
+    border: solid 6px #fff
+    &&-helping
+      border: solid 6px #2b8bcf
+      padding: 32px
+      height: 270px
+      text-align: center
+      img
+        margin-top: 10px
+      h2
+        font-size: 24px
+        font-weight: 600
+        text-align: center
+        color: #000000
+        margin: 24px 0 0 0
+        span
+          font-weight: bold
+          color: #2b8bcf
+    &&-tomove
+      background-attachment: scroll
+      background-position: 0 100%
+      background-repeat: no-repeat
+      background-size: cover
+      position: relative
+      display: block
+      height: 270px
+      background: transparent inline('bg/tomove-bg.png')
+      border: 0
+      .special-box-tomove__description
+        padding: 48px 0 47px 59px
+        h2
+          font-size: 41px
+          font-weight: bold
+          line-height: 1
+          color: #000000
+          margin: 0 0 27px 0
+          text-transform: uppercase
+        p
+          width: 340px
+          display: block
+          // background-color: rgba(255, 255, 255, 0.85)
+          font-size: 16px
+          line-height: 1.4
+          letter-spacing: 0.1px
+          color: #434342
+    &&-info
+      padding: 59px 59px 40px 59px
+      height: 270px
+      .special-box-info__description
+        h2
+          font-size: 22px
+          font-weight: bold
+          color: #000000
+          line-height: 1
+          margin: 0 0 24px 0
+        p
+          font-size: 16px
+          line-height: 1.4
+          letter-spacing: 0.1px
+          color: #434342
+    &&-sale
+      background-attachment: scroll
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      background-size: cover
+      position: relative
+      display: block
+      max-width: 360px
+      height: 270px
+      background: transparent inline('bg/sale-bg.png')
+      border: 0
+      .box-sale__header
+        text-align: center
+        padding-top: 70px
+        &-big
+          font-size: 70px
+          font-weight: bold
+          letter-spacing: -8px
+          text-align: center
+          color: #ffffff
+          line-height: 28px
+          span
+            font-size: 34px
+            font-weight: bold
+            text-align: center
+            color: #ffffff
+            letter-spacing: 0
+            margin-left: 10px
+            text-transform: uppercase
+        &-sub
+          font-size: 24px
+          text-align: center
+          color: #ffffff
+          span
+            font-weight: bold
+      .sales-box
+        background-color: #232323
+        padding: 19px 0 18px 0
+        width: 260px
+        height: 80px
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        margin: 0 auto
+        &__item
+          display: inline-block
+          width: 80px
+          font-size: 44px
+          line-height: 1
+          font-weight: bold
+          text-align: center
+          color: #ffffff
+          &&-center
+            position: relative
+            &:before,
+            &:after
+              content: ''
+              position: absolute
+              top: 14px
+              display: block
+              width: 3px
+              height: 19px
+              background-color: rgba(255, 255, 255, 0.24)
+            &:before
+              left: -1px
+            &:after
+              right: -4px

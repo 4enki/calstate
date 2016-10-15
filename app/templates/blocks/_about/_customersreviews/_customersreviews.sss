@@ -1,0 +1,87 @@
+.reviews
+  padding-top: 100px
+  padding-bottom: 120px
+  width: 100%
+  min-height: 718px
+  display: block
+  background-image: inline('bg/reviews-bg.jpg')
+  margin: 0
+  background-attachment: fixed
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  h2
+    color: #ffffff
+  &-list
+    padding-top: 50px
+    display: block
+    display: flex
+    flex: 1 1 auto
+    flex-wrap: wrap
+  &__item
+    lost-column: 1/2 3 30px
+    display: block
+    margin-bottom: 30px
+    background-color: #ffffff
+  &-box
+    background-color: #ffffff
+    border: solid 1px #2b8bcf
+    margin: 0
+    position: relative
+    z-index: 1
+    ^&__header
+      width: 100%
+      height: 130px
+      display: block
+      margin: 0
+      background-color: #fff
+      background-image: inline('reviews/reviews-bg.png')
+      background-attachment: scroll
+      background-position: 0 0
+      background-repeat: no-repeat
+      background-size: cover
+      position: relative
+      &-box
+        display: block
+        position: relative
+        padding: 20px 40px
+        .profile
+          position: absolute
+          top: 20px
+          left: 40px
+          .photo,
+          .info
+            display: inline-block
+            vertical-align: middle
+          .info
+            margin-left: 20px
+        .rating
+          position: absolute
+          top: 0
+          right: 40px
+    ^&__text
+      padding: 53px 40px 97px 40px
+      display: block
+      text-align: left
+      p
+        font-size: 14px
+        line-height: 1.6
+        letter-spacing: 0.3px
+        color: #336f96
+        text-align: left
+  &__control
+    margin-top: 50px
+    .control
+      display: block
+      text-align: center
+      &__item
+        margin-left: 15px
+        display: inline-block
+        size: 16px
+        background-color: #fff
+        border-radius: 50%
+        &:first-child
+          margin-left: 0
+        &&-active
+          background-color: #2b8bcf

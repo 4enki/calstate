@@ -2,22 +2,56 @@
   lost-center: 770px
   .faq
     background-color: #fff
-    padding: 24px 30px 24px 30px
     &__item
       display: block
     &-box
-      border-top: solid 1px #dddddd
-      border-bottom: solid 1px #dddddd
-      &&.active
-        border-bottom: 0
+      position: relative
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        left: 30px
+        right: 30px
+        display: block
+        width: 709px
+        background-color: #dddddd
+        height: 1px
+      &&-top
+        &:before
+          display: none
+      &&-bottom
+        &:after
+          display: none
+      &&-open
         .faq__q
           background-color: #2b8bcf
-          border: solid 1px #2b8bcf
           h2
             color: #fff
+          &:after
+            background-image: svg('angle-down.svg', '[fill]: #ffffff')
+            transform: rotate(-180deg)
+        .faq__content
+          display: block
     &__q
-      margin: -24px -30px 0 -30px
-      padding: 24px 30px
+      padding: 24px 80px 24px 30px
+      position: relative
+      transition: all .3s ease
+      &:hover
+        cursor: pointer
+      &:after
+        content: ''
+        position: absolute
+        display: block
+        top: center
+        right: 30px
+        size: 20px 12px
+        background-image: svg('angle-down.svg', '[fill]: #d5d5d5')
+        background-position: 50% 50%
+        text-indent: -9999px
+        background-repeat: no-repeat
+        display: inline-block
+        overflow: hidden
+        transition: all .3s ease
       h2
         font-size: 18px
         font-weight: 600
@@ -25,8 +59,35 @@
         color: #434342
         margin: 0
     &__content
-      padding-top: 50px
+      padding: 50px 30px 50px 30px
+      display: none
+      transition: all .3s ease
       p
         font-size: 16px
         line-height: 1.7
         color: #80807c
+    &-add
+      padding-top: 70px
+      h2
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.4
+        text-align: center
+        color: #000000
+        text-transform: uppercase
+      a
+        width: 220px
+        height: 54px
+        border-radius: 1px
+        background-color: #2e8ccf
+        font-size: 13px
+        letter-spacing: -0.4px
+        text-align: center
+        padding-top: 16px
+        color: #ffffff
+        display: block
+        margin: 0 auto
+        text-transform: uppercase
+        margin-top: 27px
+        span
+          font-weight: 600
