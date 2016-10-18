@@ -20,4 +20,10 @@ $(document).ready(function() {
   });
   // /спойлер-блок на странице faq
 
+  // спрятать блок обратной связи на странице с картой
+  $('._contacts__form-close').click(function(){
+    $('._contacts__form').addClass("contacts__form-hide");
+  });
+  // /спрятать блок обратной связи на странице с картой
+
 });

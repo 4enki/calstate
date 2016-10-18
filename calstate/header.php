@@ -102,7 +102,11 @@
       <div class="box">
         <div class="header-box">
           <div class="header__logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="" width="110" height="53">
+            <?php if( is_home() || is_front_page() ) { ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="CalState — #1 Los Angeles Moving Service" width="110" height="53">
+            <?php } else { ?>
+              <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="CalState — #1 Los Angeles Moving Service" width="110" height="53"></a>
+            <?php } ?>
           </div>
           <nav class="header__nav">
             <ul class="header-menu">

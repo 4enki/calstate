@@ -4,7 +4,7 @@
   function init() {
     var mapOptions = {
         zoom: 11,
-        center: new google.maps.LatLng(34.087099, -118.301621),
+        center: new google.maps.LatLng(34.087099, -118.181621),
         styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
     };
     var mapElement = document.getElementById('map');
@@ -40,8 +40,8 @@
         </div><!-- /.adress__item -->
       </div><!-- /.adress -->
     </div><!-- /.contacts__info-box -->
-    <div class="contacts__form">
-      <div class="contacts__form-close">
+    <div class="contacts__form _contacts__form">
+      <div class="contacts__form-close _contacts__form-close">
         <div class="i-cross">Закрыть это всё!</div>
       </div><!-- /.contacts__form-close -->
       <div class="contacts-form-box">

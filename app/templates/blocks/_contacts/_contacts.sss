@@ -14,6 +14,10 @@
     min-width: 720px
     text-align: center
     transition: 0.3s ease
+    &&-hide
+      right: -720px
+      width: 0
+      transition: 0.3s ease
     &-close
       cursor: pointer
       background: transparent
@@ -81,6 +85,7 @@
     text-transform: uppercase
     margin-bottom: 22px
   .contacts-form
+    display: block
     &__row
       display: flex
       justify-content: center
