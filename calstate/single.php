@@ -8,11 +8,7 @@
           <h1><?php the_title(); ?></h1>
         </div><!-- /.headline__wrapper -->
         <div class="headline__footer">
-          <div class="breadcrumbs">
-            <span class="breadcrumbs__item">HOME</span>
-            <span class="breadcrumbs__devider">/</span>
-            <span class="breadcrumbs__item">Moving Services</span>
-          </div>
+          <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
         </div><!-- /.headline__footer -->
       </div><!-- /.box -->
     </div><!-- /.headline -->
