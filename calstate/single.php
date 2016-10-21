@@ -9,7 +9,7 @@
         </div><!-- /.headline__wrapper -->
         <div class="headline__footer">
           <div class="breadcrumbs">
-            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://wptest.4enki.ru/" itemprop="url"><span itemprop="title">Home</span></a></span>
+            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">Home</span></a></span>
             <span class="breadcrumbs__devider">/</span>
             <span class="breadcrumbs__item"><a href="/blog/">Blog</a></span>
             <span class="breadcrumbs__devider">/</span>

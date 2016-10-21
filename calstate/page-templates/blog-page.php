@@ -40,7 +40,7 @@ get_header(); ?>
 
         </div><!-- /.blog-list -->
 
-        <nav class="blog-navigation">
+        <nav class="blog-navigation" style="display: none;">
           <ul class="pagination">
             <li class="pagination__item pagination__item-previous">
               <a href="#">
