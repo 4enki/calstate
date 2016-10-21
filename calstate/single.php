@@ -8,7 +8,13 @@
           <h1><?php the_title(); ?></h1>
         </div><!-- /.headline__wrapper -->
         <div class="headline__footer">
-          <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+          <div class="breadcrumbs">
+            <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://wptest.4enki.ru/" itemprop="url"><span itemprop="title">Home</span></a></span>
+            <span class="breadcrumbs__devider">/</span>
+            <span class="breadcrumbs__item"><a href="/blog/">Blog</a></span>
+            <span class="breadcrumbs__devider">/</span>
+            <span class="breadcrumbs__item"><?php the_title(); ?></span>
+          </div>
         </div><!-- /.headline__footer -->
       </div><!-- /.box -->
     </div><!-- /.headline -->
@@ -18,7 +24,7 @@
         <div class="blog-post" id="post-<?php the_ID(); ?>">
           <div class="blog-post-content">
             <div class="post-meta">
-              <span class="post-date"><?php the_time('l, F jS, Y') ?> at <?php the_time() ?></span>
+              <span class="post-date" title="at <?php the_time() ?>"><?php the_time('m.d.y') ?></span>
             </div>
             <?php the_content(); ?>
           </div><!-- /.blog-post-content -->

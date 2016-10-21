@@ -31,7 +31,7 @@ get_header(); ?>
                 <h2><?php the_title(); ?></h2>
               </div><!-- /.blog__post-header -->
               <div class="blog__post-footer">
-                <div class="post-date"><?php the_time('F jS, Y'); ?></div><!-- /.post-date -->
+                <div class="post-date" title="at <?php the_time() ?>"><?php the_time('m.d.y') ?></div><!-- /.post-date -->
               </div><!-- /.blog__post-footer -->
             </div><!-- /.blog__post blog__post1 -->
           </a>

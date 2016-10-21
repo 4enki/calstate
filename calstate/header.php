@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="no-js">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"/>
@@ -58,15 +58,29 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
-    <link href="<?php echo get_template_directory_uri(); ?>/assets/styles/style.css" rel="stylesheet" />
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/styles/style.min.css" rel="stylesheet" />
 
-    <?php /*
-      if( is_home() || is_front_page() ) {
-        echo '<meta name="a4eb7de45514435908555f948469b516" content=""/>';
-      } else {
-        echo '';
-      } */
-    ?>
+    <?php if ( is_page_template('page-templates/contacts-page.php') ) { ?>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+      google.maps.event.addDomListener(window, 'load', init);
+      function init() {
+        var mapOptions = {
+            zoom: 11,
+            center: new google.maps.LatLng(34.087099, -118.181621),
+            styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]
+        };
+        var mapElement = document.getElementById('map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(34.087099, -118.301621),
+            map: map,
+            title: 'CalState!',
+            icon: '<?php echo get_template_directory_uri(); ?>/assets/images/map-marker.png'
+        });
+      }
+    </script>
+    <?php } ?>
 
     <?php wp_head(); ?>
 
@@ -102,11 +116,11 @@
       <div class="box">
         <div class="header-box">
           <div class="header__logo">
-            <?php if( is_home() || is_front_page() ) { ?>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="CalState — #1 Los Angeles Moving Service" width="110" height="53">
-            <?php } else { ?>
-              <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="CalState — #1 Los Angeles Moving Service" width="110" height="53"></a>
-            <?php } ?>
+          <?php if( is_home() || is_front_page() ) { ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="CalState — #1 Los Angeles Moving Service" width="162" height="57">
+          <?php } else { ?>
+            <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="CalState — #1 Los Angeles Moving Service" width="162" height="57"></a>
+          <?php } ?>
           </div>
           <nav class="header__nav">
             <ul class="header-menu">

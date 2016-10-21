@@ -6,7 +6,7 @@
             <div class="footer__item">
               <div class="footer__item-box footer__item-box__totop">
                 <div class="footer-logo">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="" width="110" height="53">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="CalState — #1 Los Angeles Moving Service" width="162" height="57">
                 </div>
                 <div class="copyright">
                   <p class="copyright-text">Copyrights © 2013-2014<br>calstatemoving.com by Noxberry.<br>License number: 0190811</p>
@@ -110,7 +110,7 @@
     <?php wp_footer(); ?>
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/scripts.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/scripts.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/vendor.js"></script>
   </body>
 </html>
