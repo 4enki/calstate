@@ -15,14 +15,17 @@ $(document).ready(function() {
   $('select').niceSelect();
 
   // спойлер-блок на странице faq
-  $('.faq-box').click(function(){
-    $(this).toggleClass("faq-box-open").toggleClass("faq-box-close").next().slideToggle();
+  $('.faq__item .faq__q').on('click',function() {
+    $(".faq__q").removeClass("faq__q-open");
+    $('.faq__content').removeClass('faq__content-open');
+    $(this).addClass("faq__q-open");
+    $(this).next('.faq__content').addClass('faq__content-open');
   });
   // /спойлер-блок на странице faq
 
   // спрятать блок обратной связи на странице с картой
   $('._contacts__form-close').click(function(){
-    $('._contacts__form').addClass("contacts__form-hide");
+    $('._contacts__form').toggleClass("contacts__form-hide").next();
   });
   // /спрятать блок обратной связи на странице с картой
 

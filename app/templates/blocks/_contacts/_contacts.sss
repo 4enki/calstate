@@ -10,14 +10,16 @@
     height: 500px
     top: 0
     right: 0
-    width: 50%
+    //width: 50%
     min-width: 720px
     text-align: center
     transition: 0.3s ease
     &&-hide
-      right: -720px
+      right: -650px
       width: 0
       transition: 0.3s ease
+      .i-cross
+        transform: rotate(0)
     &-close
       cursor: pointer
       background: transparent
@@ -46,12 +48,14 @@
   height: 500px
 
 .i-cross
-  background-image: svg('close-icon.svg', '[fill]: #D4D4D4')
+  background-image: svg('arrow-ico.svg', '[fill]: #D4D4D4')
   background-position: 50% 50%
   text-indent: -9999px
   background-repeat: no-repeat
   size: 28px
   display: block
+  transform: rotate(180deg)
+  transition: all .3s ease
 
 .adress
   text-align: center

@@ -22,20 +22,17 @@
       &&-bottom
         &:after
           display: none
-      &&-open
-        .faq__q
-          background-color: #2b8bcf
-          h2
-            color: #fff
-          &:after
-            background-image: svg('angle-down.svg', '[fill]: #ffffff')
-            transform: rotate(-180deg)
-        .faq__content
-          display: block
     &__q
       padding: 24px 80px 24px 30px
       position: relative
       transition: all .3s ease
+      &&-open
+        background-color: #2b8bcf
+        h2
+          color: #fff
+        &:after
+          background-image: svg('angle-down.svg', '[fill]: #ffffff')
+          transform: rotate(-180deg)
       &:hover
         cursor: pointer
       &:after
@@ -62,6 +59,11 @@
       padding: 50px 30px 50px 30px
       display: none
       transition: all .3s ease
+      height: 0
+      &&-open
+        display: block
+        transition: all .3s ease
+        height: auto
       p
         font-size: 16px
         line-height: 1.7

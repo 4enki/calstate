@@ -1,4 +1,6 @@
 <?php
+
+// Хлебные крошки
 /*
  * "Хлебные крошки" для WordPress
  * автор: Dimox
@@ -186,8 +188,9 @@ function dimox_breadcrumbs() {
 
   }
 } // end of dimox_breadcrumbs()
+// / Хлебные крошки
 
-// /минифицируем вообще всё, АХАХАХАХАХ
+// минифицируем вообще всё, АХАХАХАХАХ
 /* Minifies HTML and removes comments (except IE tags and comments within script tags)
  *
  * To disable compression of code portions, use '<!--wp-html-compression no compression-->' tag
@@ -223,79 +226,49 @@ class WP_HTML_Compression {
     // Variable reused for output
     $html = '';
     foreach ( $matches as $token ) {
-
-            $tag = (isset($token['tag'])) ? strtolower($token['tag']) : null;
-            $content = $token[0];
-
-            if ( is_null( $tag ) ) {
-
-              if ( !empty( $token['script'] ) ) {
-
-                      $strip = $this->compress_js;
-
-              } else if ( !empty($token['style'] ) ) {
-
-                      $strip = $this->compress_css;
-
-              } else if ( $content == '<!--wp-html-compression no compression-->' ) {
-
-                      $overriding = !$overriding;
-                      // Don't print the comment
-                      continue;
-
-              } else if ( $this->remove_comments ) {
-
-                      if ( !$overriding && $raw_tag != 'textarea' ) {
-
-                              // Remove any HTML comments, except MSIE conditional comments
-                              $content = preg_replace('/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/s', '', $content);
-                      }
-              }
-
-            } else {
-
-                    if ( $tag == 'pre' || $tag == 'textarea' || $tag == 'script' ) {
-
-                            $raw_tag = $tag;
-
-                    } else if ( $tag == '/pre' || $tag == '/textarea' || $tag == '/script' ) {
-
-                            $raw_tag = false;
-
-                    } else {
-
-                            if ($raw_tag || $overriding) {
-
-                                    $strip = false;
-
-                            } else {
-
-                                    $strip = true;
-
-                                    // Remove any empty attributes, except:
-                                    // action, alt, content, src
-                                    $content = preg_replace('/(\s+)(\w++(?<!\baction|\balt|\bcontent|\bsrc)="")/', '$1', $content);
-
-                                    // Remove any space before the end of self-closing XHTML tags
-                                    // JavaScript excluded
-                                    $content = str_replace(' />', '/>', $content);
-                            }
-
-                    }
-
-            }
-
-            if ( $strip ) {
-
-                    $content = $this->removeWhiteSpace($content);
-            }
-
-            $html .= $content;
+      $tag = (isset($token['tag'])) ? strtolower($token['tag']) : null;
+      $content = $token[0];
+      if ( is_null( $tag ) ) {
+        if ( !empty( $token['script'] ) ) {
+          $strip = $this->compress_js;
+        } else if ( !empty($token['style'] ) ) {
+          $strip = $this->compress_css;
+        } else if ( $content == '<!--wp-html-compression no compression-->' ) {
+          $overriding = !$overriding;
+          // Don't print the comment
+          continue;
+        } else if ( $this->remove_comments ) {
+          if ( !$overriding && $raw_tag != 'textarea' ) {
+            // Remove any HTML comments, except MSIE conditional comments
+            $content = preg_replace('/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/s', '', $content);
+          }
+        }
+      } else {
+        if ( $tag == 'pre' || $tag == 'textarea' || $tag == 'script' ) {
+          $raw_tag = $tag;
+        } else if ( $tag == '/pre' || $tag == '/textarea' || $tag == '/script' ) {
+          $raw_tag = false;
+        } else {
+          if ($raw_tag || $overriding) {
+            $strip = false;
+          } else {
+            $strip = true;
+            // Remove any empty attributes, except:
+            // action, alt, content, src
+            $content = preg_replace('/(\s+)(\w++(?<!\baction|\balt|\bcontent|\bsrc)="")/', '$1', $content);
+            // Remove any space before the end of self-closing XHTML tags
+            // JavaScript excluded
+            $content = str_replace(' />', '/>', $content);
+          }
+        }
+      }
+      if ( $strip ) {
+        $content = $this->removeWhiteSpace($content);
+      }
+      $html .= $content;
     }
-
     return $html;
   }
-
   public function parseHTML($html) {
     $this->html = $this->minifyHTML($html);
   }
