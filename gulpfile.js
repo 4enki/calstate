@@ -363,7 +363,8 @@
   // Запуск живой сборки
   gulp.task('live', function(cb) {
     return runSequence(
-      ['copy', 'include', 'styles', 'scripts', 'watch'],
+      'copy',
+      ['include', 'styles', 'scripts', 'watch'],
       'server',
       cb
     );
@@ -392,7 +393,7 @@
   // Копируем статичные файлы
   gulp.task('copy', function(cb) {
     return runSequence(
-      ['fonts', 'images', 'resources', 'scripts:copy'],
+      ['images', 'fonts', 'resources', 'scripts:copy'],
       cb
     );
   });

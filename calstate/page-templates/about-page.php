@@ -4,6 +4,7 @@
  */
 
 get_header(); ?>
+
 <div class="headline headline-about" style="background-image: url('<?php echo get_field('about_bg_img-page'); ?>');">
   <div class="box">
     <div class="headline__wrapper">
@@ -154,32 +155,79 @@ get_header(); ?>
 
         <div class="reviews-list">
 
-          <div class="reviews__item">
-            <div class="reviews-box">
-              <div class="reviews__header">
-                <div class="reviews__header-box">
-                  <div class="profile">
-                    <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
-                    <div class="info"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/profile.png" alt=""></div>
+          <div id="reviews-box" class="owl-carousel owl-theme">
+
+            <div class="reviews__item">
+              <div class="reviews-box">
+                <div class="reviews__header">
+                  <div class="reviews__header-box">
+                    <div class="profile">
+                      <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
+                      <div class="info"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/profile.png" alt=""></div>
+                    </div>
+                    <div class="rating"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/rating.png" alt=""></div>
                   </div>
-                  <div class="rating"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/rating.png" alt=""></div>
-                </div>
-              </div><!-- /.reviews__header -->
-              <div class="reviews__text">
-                <p>The move went exactly as I'd expected and they were able to accommodate to my special requests as I needed to make a quick pit stop to drop off a third of my boxes at a house nearby before moving my classroom full of boxes to another school.  They were helpful and I couldn't be more happier. I will surely use them again for my next move.</p>
-              </div><!-- /.reviews__text -->
-            </div><!-- /.reviews-box -->
-          </div><!-- /.reviews__item -->
+                </div><!-- /.reviews__header -->
+                <div class="reviews__text">
+                  <p>The move went exactly as I'd expected and they were able to accommodate to my special requests as I needed to make a quick pit stop to drop off a third of my boxes at a house nearby before moving my classroom full of boxes to another school.  They were helpful and I couldn't be more happier. I will surely use them again for my next move.</p>
+                </div><!-- /.reviews__text -->
+              </div><!-- /.reviews-box -->
+            </div><!-- /.reviews__item -->
+
+            <div class="reviews__item">
+              <div class="reviews-box">
+                <div class="reviews__header">
+                  <div class="reviews__header-box">
+                    <div class="profile">
+                      <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
+                      <div class="info"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/profile.png" alt=""></div>
+                    </div>
+                    <div class="rating"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/rating.png" alt=""></div>
+                  </div>
+                </div><!-- /.reviews__header -->
+                <div class="reviews__text">
+                  <p>The move went exactly as I'd expected and they were able to accommodate to my special requests as I needed to make a quick pit stop to drop off a third of my boxes at a house nearby before moving my classroom full of boxes to another school.  They were helpful and I couldn't be more happier. I will surely use them again for my next move.</p>
+                </div><!-- /.reviews__text -->
+              </div><!-- /.reviews-box -->
+            </div><!-- /.reviews__item -->
+
+            <div class="reviews__item">
+              <div class="reviews-box">
+                <div class="reviews__header">
+                  <div class="reviews__header-box">
+                    <div class="profile">
+                      <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
+                      <div class="info"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/profile.png" alt=""></div>
+                    </div>
+                    <div class="rating"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/rating.png" alt=""></div>
+                  </div>
+                </div><!-- /.reviews__header -->
+                <div class="reviews__text">
+                  <p>The move went exactly as I'd expected and they were able to accommodate to my special requests as I needed to make a quick pit stop to drop off a third of my boxes at a house nearby before moving my classroom full of boxes to another school.  They were helpful and I couldn't be more happier. I will surely use them again for my next move.</p>
+                </div><!-- /.reviews__text -->
+              </div><!-- /.reviews-box -->
+            </div><!-- /.reviews__item -->
+
+            <div class="reviews__item">
+              <div class="reviews-box">
+                <div class="reviews__header">
+                  <div class="reviews__header-box">
+                    <div class="profile">
+                      <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
+                      <div class="info"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/profile.png" alt=""></div>
+                    </div>
+                    <div class="rating"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/rating.png" alt=""></div>
+                  </div>
+                </div><!-- /.reviews__header -->
+                <div class="reviews__text">
+                  <p>The move went exactly as I'd expected and they were able to accommodate to my special requests as I needed to make a quick pit stop to drop off a third of my boxes at a house nearby before moving my classroom full of boxes to another school.  They were helpful and I couldn't be more happier. I will surely use them again for my next move.</p>
+                </div><!-- /.reviews__text -->
+              </div><!-- /.reviews-box -->
+            </div><!-- /.reviews__item -->
+
+          </div><!-- /.owl-carousel -->
 
         </div><!-- /.reviews-list -->
-
-        <div class="reviews__control">
-          <div class="control">
-            <div class="control__item control__item-active"></div>
-            <div class="control__item"></div>
-            <div class="control__item"></div>
-          </div>
-        </div>
 
       </div><!-- /.reviews-wrap -->
     </div><!-- /.box -->

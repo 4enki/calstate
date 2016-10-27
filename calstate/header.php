@@ -60,6 +60,15 @@
 
     <link href="<?php echo get_template_directory_uri(); ?>/assets/styles/style.min.css" rel="stylesheet" />
 
+    <?php if ( is_page_template('page-templates/faq-page.php') ) { ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scripts/magnific-popup/magnific-popup.css">
+    <?php } ?>
+
+    <?php if ( is_page_template('page-templates/about-page.php') ) { ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scripts/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scripts/owl-carousel/owl.theme.css">
+    <?php } ?>
+
     <?php if ( is_page_template('page-templates/contacts-page.php') ) { ?>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript">

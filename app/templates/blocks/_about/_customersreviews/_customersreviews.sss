@@ -20,7 +20,7 @@
     flex: 1 1 auto
     flex-wrap: wrap
   &__item
-    lost-column: 1/2 3 30px
+    width: 560px
     display: block
     margin-bottom: 30px
     background-color: #ffffff
@@ -85,3 +85,14 @@
           margin-left: 0
         &&-active
           background-color: #2b8bcf
+  .owl-theme .owl-controls .owl-page
+    margin-right: 5px
+    &:last-child
+      margin-right: 0
+  .owl-theme .owl-controls .owl-page span
+    size: 16px
+    background-color: #fff
+    border-radius: 50%
+    opacity: 1
+  .owl-theme .owl-controls .owl-page.active span
+    background-color: #2b8bcf

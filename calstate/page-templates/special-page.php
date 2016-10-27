@@ -52,7 +52,7 @@ get_header(); ?>
 
           <div class="special-col4">
             <div class="special-box special-box-helping">
-              <img src="assets/images/helping.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/helping.png" alt="">
               <h2>Helping people with disabilities to move <span>FREE</span>.</h2>
             </div>
           </div><!-- /.special-col4 -->

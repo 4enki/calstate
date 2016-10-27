@@ -29,4 +29,34 @@ $(document).ready(function() {
   });
   // /спрятать блок обратной связи на странице с картой
 
+  // показываем попап добавления вопроса
+  $('.add-question-modal').magnificPopup({
+    showCloseBtn: true,
+    type: 'inline',
+
+    fixedContentPos: true,
+    fixedBgPos: false,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  });
+  // кнопка закрытия попапа добавления вопроса
+  $('._mfp-close').click(function(){
+    $.magnificPopup.close();
+  });
+  // /кнопка закрытия попапа добавления вопроса
+  // /показываем попап добавления вопроса
+
+  var owl = $("#reviews-box");
+  owl.owlCarousel({
+    items: 2,
+    navigation: false
+  });
+
 });

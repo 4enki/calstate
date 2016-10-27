@@ -5,10 +5,10 @@
 
 get_header(); ?>
 
-<div class="headline headline-blog">
+<div class="headline" style="background-image: url('<?php echo get_field('blog_bg_img-page'); ?>');">
   <div class="box">
     <div class="headline__wrapper">
-      <h1>Blog</h1>
+      <h1><?php the_title(); ?></h1>
     </div><!-- /.headline__wrapper -->
     <div class="headline__footer">
       <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
@@ -27,12 +27,14 @@ get_header(); ?>
 
           <a href="<?php the_permalink(); ?>">
             <div class="blog__post" id="post-<?php the_ID(); ?>" style="background-image: url('<?php echo get_field('post_bg_img-blog'); ?>');">
-              <div class="blog__post-header">
-                <h2><?php the_title(); ?></h2>
-              </div><!-- /.blog__post-header -->
-              <div class="blog__post-footer">
-                <div class="post-date" title="at <?php the_time() ?>"><?php the_time('m.d.y') ?></div><!-- /.post-date -->
-              </div><!-- /.blog__post-footer -->
+              <div class="blog__card">
+                <div class="blog__post-header">
+                  <h2><?php the_title(); ?></h2>
+                </div><!-- /.blog__post-header -->
+                <div class="blog__post-footer">
+                  <div class="post-date" title="at <?php the_time() ?>"><?php the_time('m.d.y') ?></div><!-- /.post-date -->
+                </div><!-- /.blog__post-footer -->
+              </div><!-- /.blog__card -->
             </div><!-- /.blog__post blog__post1 -->
           </a>
 
