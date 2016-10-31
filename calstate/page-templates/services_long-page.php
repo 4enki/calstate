@@ -16,20 +16,13 @@ get_header(); ?>
   </div><!-- /.box -->
 </div><!-- /.headline -->
 
+
+
 <div class="page-wrapper">
   <div class="box">
     <div class="page-box">
       <div class="page__menu">
-        <ul class="left-menu">
-          <li class="left-menu__item"><a href="" class="left-menu__link">Local Moving</a></li>
-          <li class="left-menu__item left-menu__item-active"><a href="" class="left-menu__link">Long Distance Moving</a></li>
-          <li class="left-menu__item"><a href="" class="left-menu__link">International Moving</a></li>
-          <li class="left-menu__item"><a href="" class="left-menu__link">Moving Labor</a></li>
-          <li class="left-menu__item"><a href="" class="left-menu__link">Commercial Moving</a></li>
-          <li class="left-menu__item"><a href="" class="left-menu__link">Corporate Relocation</a></li>
-          <li class="left-menu__item"><a href="" class="left-menu__link">Government & Military Moving</a></li>
-          <li class="left-menu__item"><a href="" class="left-menu__link">Special Items Moving</a></li>
-        </ul>
+        <?php wp_nav_menu( array ('menu' => 'moving-menu', 'menu_class' => 'left-menu', 'container' => 'false')); ?>
       </div><!-- /.page__menu -->
       <div class="page__content">
 

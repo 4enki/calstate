@@ -13,21 +13,21 @@
     img
       margin-bottom: 0
   &__nav
-    margin-top: -4px  
+    margin-top: -4px
   .header-menu
     list-style: none
     margin: 0
     padding: 0
-    &__item
+    &__item,
+    li
       display: inline-block
       margin-right: 50px
       padding: 16px 1px 18px 1px
       transition: 0.3s ease
       &:last-child
         margin-right: 0
-      &&-active
-        border-bottom: 3px solid #2b8bcf
-    &__link
+    &__link,
+    a
       font-size: 13px
       font-weight: 600
       text-align: center
@@ -35,6 +35,8 @@
       text-transform: uppercase
       &:hover
         color: #2b8bcf
+    .current-menu-item
+      border-bottom: 3px solid #2b8bcf
   &__tel
     margin-bottom: 10px
 .tel-box

@@ -3,7 +3,8 @@
   list-style: none
   margin: 0
   padding: 0
-  &__item
+  &__item,
+  li
     position: relative
     border-bottom: 1px solid #f0f0f0
     display: block
@@ -13,7 +14,8 @@
       border-bottom-color: #2288ce
       ^^&__link
         color: #fff
-  &__link
+  &__link,
+  a
     font-size: 14px
     font-weight: 600
     line-height: 1
@@ -22,3 +24,8 @@
     text-transform: uppercase
     &:hover
       color: #2b8bcf
+  .current-menu-item
+    background-color: #2288ce
+    border-bottom-color: #2288ce
+    a
+      color: #fff

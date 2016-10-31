@@ -6,91 +6,54 @@
             <div class="footer__item">
               <div class="footer__item-box footer__item-box__totop">
                 <div class="footer-logo">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="CalState — #1 Los Angeles Moving Service" width="162" height="57">
+                  <?php if( is_home() || is_front_page() ) { ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="CalState — #1 Los Angeles Moving Service" width="162" height="57">
+                  <?php } else { ?>
+                    <a href="/"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="CalState — #1 Los Angeles Moving Service" width="162" height="57"></a>
+                  <?php } ?>
                 </div>
                 <div class="copyright">
-                  <p class="copyright-text">Copyrights © 2013-2014<br>calstatemoving.com by Noxberry.<br>License number: 0190811</p>
+                  <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Подвал, копирайт") ) : endif; ?>
                 </div>
               </div><!-- /.footer__item-box -->
             </div><!-- /.footer__item -->
 
             <div class="footer__item">
               <div class="footer__item-box footer__item-box__totop">
-                <ul class="footer-menu">
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">About Calstate</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Blog</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">FAQ</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Careers</a></li>
-                </ul>
+                <?php wp_nav_menu( array ('menu' => 'footer-menu-main', 'menu_class' => 'footer-menu', 'container' => 'false')); ?>
               </div><!-- /.footer__item-box -->
             </div><!-- /.footer__item -->
 
             <div class="footer__item">
               <div class="footer__item-box">
-                <h3>Moving Services</h3>
-                <ul class="footer-menu">
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Local Moving</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Long Distance Moving</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">International Moving</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Moving Labor</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Commercial Moving</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Corporate Relocation</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Goverment & Military Moving</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Spetial Items Moving</a></li>
-                </ul>
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Подвал, блок Moving Services") ) : endif; ?>
+                <?php wp_nav_menu( array ('menu' => 'footer-menu-moving', 'menu_class' => 'footer-menu', 'container' => 'false')); ?>
               </div><!-- /.footer__item-box -->
             </div><!-- /.footer__item -->
 
             <div class="footer__item">
               <div class="footer__item-box">
-                <h3>Storage Services</h3>
-                <ul class="footer-menu">
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Self Storage</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Business Storage</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Packing & Unpacking</a></li>
-                </ul>
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Подвал, блок Storage Services") ) : endif; ?>
+                <?php wp_nav_menu( array ('menu' => 'footer-menu-storage', 'menu_class' => 'footer-menu', 'container' => 'false')); ?>
               </div><!-- /.footer__item-box -->
             </div><!-- /.footer__item -->
 
             <div class="footer__item">
               <div class="footer__item-box">
-                <h3>Buy Supplies</h3>
-                <ul class="footer-menu">
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Moving Kits</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Moving Boxes</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Moving Suplies</a></li>
-                  <li class="footer-menu__item"><a href="" class="footer-menu__link">Moving Equipments</a></li>
-                </ul>
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Подвал, блок Buy Supplies") ) : endif; ?>
+                <?php wp_nav_menu( array ('menu' => 'footer-menu-buy', 'menu_class' => 'footer-menu', 'container' => 'false')); ?>
               </div><!-- /.footer__item-box -->
             </div><!-- /.footer__item -->
 
             <div class="footer__item footer__item-right">
               <div class="footer__item-box">
-                <div class="tel-box">
-                  <span class="tel-box__ico"></span>
-                  <a href="tel:+18008881508" class="tel-box__link">800&nbsp;888&nbsp;1508</a>
-                </div>
-                <div class="tel-box">
-                  <span class="tel-box__ico"></span>
-                  <a href="tel:+18008881508" class="tel-box__link">800&nbsp;888&nbsp;1508</a>
-                </div>
-                <div class="social">
-                  <div class="social__item">
-                    <a href="#" class="social-link social-link__twi"><span class="social__twi">Twitter</span></a>
-                  </div><!-- /.social__item -->
-                  <div class="social__item">
-                    <a href="#" class="social-link social-link__fb"><span class="social__fb">FB</span></a>
-                  </div><!-- /.social__item -->
-                  <div class="social__item">
-                    <a href="#" class="social-link social-link__gp"><span class="social__gp">G+</span></a>
-                  </div><!-- /.social__item -->
-                </div><!-- /.social -->
+                <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Подвал, правый блок") ) : endif; ?>
               </div><!-- /.footer__item-box -->
             </div><!-- /.footer__item -->
 
           </div><!-- /.footer__wrapper -->
 
-          <div class="footer__mail-box">
+          <div class="footer__mail-box" style="display: none;">
             <div class="subscribe">
               <form action="" class="form-mail subscribe-mail">
                 <div class="form-group">
@@ -110,10 +73,10 @@
     <?php wp_footer(); ?>
 
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <?php if ( is_page_template('page-templates/faq-page.php') || is_page_template('page-templates/about-page.php') ) { ?>
+  <?php if ( is_page_template('page-templates/faq-page.php') || is_page_template('page-templates/about-page.php') ) { ?>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/owl-carousel/owl.carousel.js"></script>
-    <?php } ?>
+  <?php } ?>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/scripts.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/vendor.js"></script>
   </body>

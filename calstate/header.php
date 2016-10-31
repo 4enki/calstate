@@ -99,11 +99,7 @@
       <div class="box">
         <div class="statusbar-box">
           <div class="statusbar__menu">
-            <ul class="statusbar-menu">
-              <li class="statusbar-menu__item"><a href="" class="statusbar-menu__link">ABOUT CALSTATE</a></li>
-              <li class="statusbar-menu__item"><a href="" class="statusbar-menu__link">BLOG</a></li>
-              <li class="statusbar-menu__item"><a href="" class="statusbar-menu__link">FAQ</a></li>
-            </ul>
+            <?php wp_nav_menu( array ('menu' => 'statusbar__menu', 'menu_class' => 'statusbar-menu', 'container' => 'false')); ?>
           </div><!-- /.statusbar__menu -->
           <div class="statusbar__geo">
             <div class="location">
@@ -132,18 +128,11 @@
           <?php } ?>
           </div>
           <nav class="header__nav">
-            <ul class="header-menu">
-              <li class="header-menu__item header-menu__item-active"><a href="" class="header-menu__link">Moving Services</a></li>
-              <li class="header-menu__item"><a href="" class="header-menu__link">Storage Services</a></li>
-              <li class="header-menu__item"><a href="" class="header-menu__link">Buy Supplies</a></li>
-              <li class="header-menu__item"><a href="" class="header-menu__link">Special Offers</a></li>
-              <li class="header-menu__item"><a href="" class="header-menu__link">Contact Us</a></li>
-            </ul>
+            <?php wp_nav_menu( array ('menu' => 'header-menu', 'menu_class' => 'header-menu', 'container' => 'false')); ?>
           </nav>
           <div class="header__tel">
             <div class="tel-box">
-              <span class="tel-box__ico"></span>
-              <a href="tel:+18008881508" class="tel-box__link">800&nbsp;888&nbsp;1508</a>
+              <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Шапка, номер телефона") ) : endif; ?>
             </div>
           </div>
         </div><!-- /.header__box -->

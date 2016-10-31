@@ -1,5 +1,92 @@
 <?php
 
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Шапка, номер телефона',
+    'description' => __( 'Блок в шапке справа с номером телефона', '' ),
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
+  ));
+  register_sidebar(array(
+    'name' => 'Подвал, копирайт',
+    'description' => __( 'Блок с левой стороны в подвале с правовой информацией и номером лицензии', '' ),
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
+  ));
+  register_sidebar(array(
+    'name' => 'Подвал, правый блок',
+    'description' => __( 'Блок с правой стороны с номером телефона и соцссылками', '' ),
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
+  ));
+  register_sidebar(array(
+    'name' => 'Подвал, блок Moving Services',
+    'description' => __( 'Блок Moving Services', '' ),
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
+  ));
+  register_sidebar(array(
+    'name' => 'Подвал, блок Storage Services',
+    'description' => __( 'Блок Storage Services', '' ),
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
+  ));
+  register_sidebar(array(
+    'name' => 'Подвал, блок Buy Supplies',
+    'description' => __( 'Блок Buy Supplies', '' ),
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '',
+    'after_title' => '',
+  ));
+
+/* добавляем в тему меню */
+if (function_exists('add_theme_support')) {
+	add_theme_support('menus');
+}
+add_filter('nav_menu_item_id', 'remove_nav_menu_item_id');
+  function remove_nav_menu_item_id($id) {
+  return "";
+}
+/* /добавляем в тему меню */
+
+/* удаляем всякое дерьмо, генерируемое вордпрессом */
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+remove_action('wp_head','rel_canonical');
+remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+remove_filter('pre_term_description', 'wp_filter_kses');
+remove_filter('pre_term_description', 'wp_kses_data');
+//remove_filter( 'the_content', 'wpautop' ); // Отключаем автоформатирование в полном посте
+remove_filter( 'the_excerpt', 'wpautop' ); // Отключаем автоформатирование в кратком(анонсе) посте
+remove_filter('comment_text', 'wpautop'); // Отключаем автоформатирование в комментариях
+/* /удаляем всякое дерьмо, генерируемое вордпрессом */
+
+/* выпиливаем к херам стандартный jqery */
+function add_scripts() {
+  wp_deregister_script( 'jquery' );
+}
+add_action('wp_enqueue_scripts', 'add_scripts');
+/* /выпиливаем к херам стандартный jqery */
+
+
 // Хлебные крошки
 /*
  * "Хлебные крошки" для WordPress
