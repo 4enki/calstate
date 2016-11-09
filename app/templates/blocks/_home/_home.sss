@@ -1,0 +1,177 @@
+.home
+  background-color: #F6F6F6
+  .light-box
+    h2
+      color: #000
+  h2
+    font-size: 30px
+    font-weight: bold
+    line-height: 0.7
+    text-align: center
+    color: #ffffff
+    position: relative
+    span
+      color: #2b8bcf
+    &:before,
+    &:after
+      content: ""
+      position: relative
+      display: inline-block
+      width: 87px
+      margin: 0 60px
+      height: 3px
+      vertical-align: middle
+      background: transparent
+      background-clip: content-box
+    &:before
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      background-image: svg('left-head.svg', '[fill]: #CCCCCC')
+    &:after
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      background-image: svg('right-head.svg', '[fill]: #CCCCCC')
+.movamon
+  padding-bottom: 50px
+  padding-top: 100px
+  .box-title
+    p
+      font-size: 14px
+      font-weight: 600
+      text-align: center
+      color: #4c4c4c
+      margin-top: 28px
+      margin-bottom: 35px
+  &-list
+    padding-top: 0
+    margin-bottom: 50px
+    display: block
+    display: flex
+    flex: 1 1 auto
+    flex-wrap: wrap
+  &__item
+    lost-column: 1/2 2 30px
+    display: block
+    margin-bottom: 0
+    height: 655px
+    &&-left
+      background-color: #ffffff
+      box-shadow: 0 2px 5px 0 rgba(189, 189, 189, 0.5)
+      position: relative
+      h3
+        font-size: 25px
+        line-height: 1
+        letter-spacing: -0.7px
+        color: #333333
+        margin: 0
+        span
+          font-weight: bold
+      p
+        font-size: 16px
+        line-height: 1.4
+        color: #4c4c4c
+      ul
+        margin-top: 33px
+        list-style-type: none
+        margin-bottom: 2em
+        padding-left: 0
+        li
+          margin-left: 26px
+          font-size: 14px
+          line-height: 2.2
+          letter-spacing: -0.4px
+          color: #2a7cb7
+          position: relative
+          &:before
+            content: ''
+            color: #2a7cb7
+            speak: none
+            display: inline-block
+            text-align: center
+            margin-top: 6px
+            font-size: 16px
+            font-weight: bold
+            width: 16px
+            line-height: 16px
+            height: 16px
+            position: absolute
+            left: -25px
+            background-image: svg('right-arrow-in-a-circle.svg', '[fill]: #2a7cb7')
+  &-man
+    position: absolute
+    top: 12px
+    right: 0
+    margin: 0
+  &-box
+    margin: 0
+    position: relative
+    padding: 53px 46px
+    text-align: left
+    p
+      font-family: $Roboto
+      font-size: 16px
+      line-height: 1.4
+      letter-spacing: 0.1px
+      color: #434342
+
+.card
+  &__item
+    background-color: #ffffff
+    box-shadow: 0 2px 5px 0 rgba(189, 189, 189, 0.5)
+    height: 313px
+  &-box
+    text-align: left
+  &-content
+    display: block
+    padding: 21px 11px 24px 11px
+    h3
+      font-size: 16px
+      line-height: 1
+      letter-spacing: -0.4px
+      color: #333333
+      margin: 0
+      span
+        font-weight: bold
+    p
+      font-size: 13px
+      line-height: 1.4
+      color: #4c4c4c
+
+.shadow-box
+  background-color: rgba(254, 254, 254, 0.82)
+  display: block
+  padding: 52px 46px
+  position: absolute
+  bottom: 0
+
+.reviews-text
+  padding-top: 45px
+  margin-bottom: 0px
+  display: block
+  display: flex
+  flex: 1 1 auto
+  flex-wrap: wrap
+  &__item
+    lost-column: 1/2 2 30px
+    p
+      font-size: 16px
+      line-height: 1.2
+      text-align: right
+      color: #ffffff
+      margin-bottom: 30px
+      margin-top: 0
+      &:last-child
+        margin-bottom: 0
+    h3
+      font-size: 40px
+      font-weight: 100
+      line-height: 1.2
+      color: #ffffff
+      margin: 0
+      text-transform: uppercase
+      span
+        display: block
+        font-size: 40px
+        font-weight: bold
+        line-height: 1.2
+        color: #2b8bcf
