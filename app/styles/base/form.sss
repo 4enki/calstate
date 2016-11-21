@@ -56,6 +56,10 @@
       background-image: svg('angle-right.svg', '[fill]: #ffffff')
 
 .form-inline
+  width: 1005px
+  margin: 0 auto
+  &__row
+    margin-bottom: 10px
   .form-group
     display: inline-block
     margin-bottom: 0
@@ -130,7 +134,13 @@
     transition: 0.5s ease
     position: relative
     line-height: 43px
-
+    &-get
+      display: block
+      margin: 10px auto 0 auto
+  textarea.form-control
+    height: 324px
+    display: block
+    width: 1000px
 .get__form,
 .contacts-form
   .form-group
