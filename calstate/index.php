@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php
+
+get_header(); ?>
 
 <div class="headline" style="background-image: url('<?php echo get_field('blog_bg_img-page'); ?>');">
   <div class="box">

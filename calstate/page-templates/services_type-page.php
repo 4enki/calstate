@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Services long page
+ * Template Name: Services type page
  */
 
 get_header(); ?>
