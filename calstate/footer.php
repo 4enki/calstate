@@ -72,10 +72,5 @@
 
     <?php wp_footer(); ?>
 
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/magnific-popup/jquery.magnific-popup.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/owl-carousel/owl.carousel.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/scripts.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/vendor.js"></script>
   </body>
 </html>

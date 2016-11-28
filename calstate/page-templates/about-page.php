@@ -17,6 +17,7 @@ get_header(); ?>
 </div><!-- /.headline -->
 
 <div class="about">
+
   <div class="box">
     <h2>MORE THAN <span>1,000 MOVES A MONTH</span></h2>
     <div class="about-list">
@@ -35,7 +36,8 @@ get_header(); ?>
       </div><!-- /.about__item -->
     </div><!-- /.about-list -->
   </div><!-- /.box -->
-  <div class="why">
+
+  <div class="why" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/why-bg.jpg');">
     <div class="box">
       <h2>WHY CHOOSE US</h2>
       <div class="why-list">
@@ -148,7 +150,7 @@ get_header(); ?>
     </div><!-- /.box -->
   </div><!-- /.ourpartner -->
 
-  <div class="reviews">
+  <div class="reviews" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/reviews-bg.jpg');">>
     <div class="box">
       <h2>CUSTOMERS REVIEWS</h2>
       <div class="reviews-wrap">
@@ -159,7 +161,7 @@ get_header(); ?>
 
             <div class="reviews__item">
               <div class="reviews-box">
-                <div class="reviews__header">
+                <div class="reviews__header" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/reviews/reviews-bg.png');">
                   <div class="reviews__header-box">
                     <div class="profile">
                       <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
@@ -176,7 +178,7 @@ get_header(); ?>
 
             <div class="reviews__item">
               <div class="reviews-box">
-                <div class="reviews__header">
+                <div class="reviews__header" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/reviews/reviews-bg.png');">
                   <div class="reviews__header-box">
                     <div class="profile">
                       <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
@@ -193,7 +195,7 @@ get_header(); ?>
 
             <div class="reviews__item">
               <div class="reviews-box">
-                <div class="reviews__header">
+                <div class="reviews__header" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/reviews/reviews-bg.png');">
                   <div class="reviews__header-box">
                     <div class="profile">
                       <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
@@ -210,7 +212,7 @@ get_header(); ?>
 
             <div class="reviews__item">
               <div class="reviews-box">
-                <div class="reviews__header">
+                <div class="reviews__header" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/reviews/reviews-bg.png');">
                   <div class="reviews__header-box">
                     <div class="profile">
                       <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>

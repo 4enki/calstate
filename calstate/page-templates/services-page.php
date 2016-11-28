@@ -28,7 +28,7 @@ get_header(); ?>
 
           <div class="card__item">
             <a href="/moving-services/local/">
-              <div class="card-box card-box-1">
+              <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/1.png');">
                 <div class="card__description">
                   <div class="card__description-header">
                     <h2>Local Moving</h2>
@@ -43,7 +43,7 @@ get_header(); ?>
 
           <div class="card__item">
             <a href="/moving-services/longdistance/">
-              <div class="card-box card-box-2">
+              <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/2.png');">
                 <div class="card__description">
                   <div class="card__description-header">
                     <h2>Long Distance Moving</h2>
@@ -58,7 +58,7 @@ get_header(); ?>
 
           <div class="card__item">
             <a href="">
-              <div class="card-box card-box-3">
+              <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/3.png');">
                 <div class="card__description">
                   <div class="card__description-header">
                     <h2>International Moving</h2>
@@ -73,7 +73,7 @@ get_header(); ?>
 
           <div class="card__item">
             <a href="">
-              <div class="card-box card-box-4">
+              <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/4.png');">
                 <div class="card__description">
                   <div class="card__description-header">
                     <h2>Moving Labor</h2>
@@ -88,7 +88,7 @@ get_header(); ?>
 
           <div class="card__item">
             <a href="">
-              <div class="card-box card-box-5">
+              <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/5.png');">
                 <div class="card__description">
                   <div class="card__description-header">
                     <h2>Commercial Moving</h2>
@@ -102,7 +102,7 @@ get_header(); ?>
           </div><!-- /.card__item -->
 
           <div class="card__item">
-            <div class="card-box card-box-6">
+            <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/6.png');">
               <div class="card__description">
                 <div class="card__description-header">
                   <h2>Corporate Relocation</h2>
@@ -116,7 +116,7 @@ get_header(); ?>
 
           <div class="card__item">
             <a href="">
-              <div class="card-box card-box-7">
+              <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/7.png');">
                 <div class="card__description">
                   <div class="card__description-header">
                     <h2>Government & Military Moving</h2>
@@ -131,7 +131,7 @@ get_header(); ?>
 
           <div class="card__item">
             <a href="">
-              <div class="card-box card-box-8">
+              <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/8.png');">
                 <div class="card__description">
                   <div class="card__description-header">
                     <h2>Special Items Moving</h2>

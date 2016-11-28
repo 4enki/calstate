@@ -5,23 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui"/>
 
     <title><?php wp_title('', true, 'right'); ?></title>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="imagetoolbar" content="no"/>
     <meta name="msthemecompatible" content="no"/>
     <meta name="cleartype" content="on"/>
     <meta name="HandheldFriendly" content="True"/>
-
-
     <meta name="format-detection" content="telephone=no"/>
     <meta name="format-detection" content="address=no"/>
-
     <meta name="google" value="notranslate"/>
-
     <meta name="theme-color" content="#ffffff"/>
-
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
@@ -60,14 +52,14 @@
 
     <link href="<?php echo get_template_directory_uri(); ?>/assets/styles/style.min.css" rel="stylesheet" />
 
-    <?php if ( is_page_template('page-templates/faq-page.php') ) { ?>
+   <?php if ( is_page_template('page-templates/faq-page.php') ) { ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scripts/magnific-popup/magnific-popup.css">
-    <?php } ?>
+   <?php } ?>
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scripts/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scripts/owl-carousel/owl.theme.css">
 
-    <?php if ( is_page_template('page-templates/contacts-page.php') ) { ?>
+   <?php if ( is_page_template('page-templates/contacts-page.php') ) { ?>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript">
       google.maps.event.addDomListener(window, 'load', init);
@@ -87,12 +79,19 @@
         });
       }
     </script>
-    <?php } ?>
+   <?php } ?>
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/owl-carousel/owl.carousel.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/scripts.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/scripts/vendor.js"></script>
 
     <?php wp_head(); ?>
 
   </head>
   <body>
+
     <div class="statusbar">
       <div class="box">
         <div class="statusbar-box">
