@@ -11,6 +11,7 @@
   "scripts": {
     "start": "gulp live",
     "world": "gulp external-world",
+     "prod": "gulp --prod",
       "zip": "gulp zip --build",
      "gulp": "./node_modules/.bin/gulp"
   },

@@ -1,0 +1,162 @@
+.careers
+  background-color: #fff
+  &-headline
+    width: 100%
+    min-height: 221px
+    background-color: rgba(43,138,207,0.86)
+    margin: 0
+    background-attachment: scroll
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    display: block
+    &__info
+      text-align: center
+      top: center
+      left: center
+      width: 720px
+      margin: 0 auto
+    h2
+      font-size: 20px
+      color: #FFFFFF
+      letter-spacing: 0
+      line-height: 27px
+      margin: 0 0 20px 0
+      text-transform: uppercase
+    p
+      font-size: 16px
+      color: #FFFFFF
+      letter-spacing: 0.1px
+      line-height: 22px
+.careers-page
+  lost-center: 770px
+  .careers
+    background-color: #fff
+    &-headline
+      width: 100%
+      min-height: 221px
+      background-color: rgba(43,138,207,0.26)
+      margin: 0
+      background-attachment: scroll
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      background-size: cover
+      position: relative
+      display: block
+    &__item
+      display: block
+    &-box
+      position: relative
+      &:before,
+      &:after
+        content: ''
+        position: absolute
+        left: 30px
+        right: 30px
+        display: block
+        width: 709px
+        background-color: #dddddd
+        height: 1px
+      &&-top
+        &:before
+          display: none
+      &&-bottom
+        &:after
+          display: none
+    &__q
+      padding: 24px 80px 24px 30px
+      position: relative
+      transition: all .3s ease
+      &&-open
+        background-color: #2b8bcf
+        h2
+          color: #fff
+        &:after
+          background-image: svg('angle-down.svg', '[fill]: #ffffff')
+          transform: rotate(-180deg)
+      &:hover
+        cursor: pointer
+      &:after
+        content: ''
+        position: absolute
+        display: block
+        top: center
+        right: 30px
+        size: 20px 12px
+        background-image: svg('angle-down.svg', '[fill]: #d5d5d5')
+        background-position: 50% 50%
+        text-indent: -9999px
+        background-repeat: no-repeat
+        display: inline-block
+        overflow: hidden
+        transition: all .3s ease
+      h2
+        font-size: 18px
+        font-weight: 600
+        line-height: 1.5
+        color: #2B8BCF
+        margin: 0
+    &__content
+      padding: 50px 30px 50px 30px
+      display: none
+      transition: all .3s ease
+      height: 0
+      &&-open
+        display: block
+        transition: all .3s ease
+        height: auto
+      p
+        font-size: 16px
+        line-height: 1.7
+        color: #80807c
+      .info-text
+        color: #333333
+        a
+          color: #333333
+          margin-right: 10px
+      h3
+        font-size: 16px
+        color: #333333
+        letter-spacing: 0
+        line-height: 27px
+      ul
+        margin-top: 15px
+        list-style-type: none
+        margin-left: 25px
+        li
+          margin-left: 20px
+          margin-bottom: 15px
+          font-size: 14px
+          color: #80807C
+          letter-spacing: 0
+          line-height: 23px
+          position: relative
+          &:before
+            display: block
+            position: absolute
+            content: ''
+            size: 6px
+            top: 8px
+            left: -15px
+            background: #2B8BCF
+            border-radius: 50%
+    &-info
+      padding-top: 70px
+      text-align: center
+      h2
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.4
+        text-align: center
+        color: #000000
+        text-transform: uppercase
+      a
+        display: inline-block
+        font-size: 16px
+        color: #333333
+        letter-spacing: 0
+        line-height: 27px
+        margin-right: 15px
+        &:last-child
+          margin-right: 0

@@ -7,7 +7,8 @@ get_header(); ?>
 
 
 <div class="home">
-    <div class="lead">
+
+    <div class="lead" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/lead-bg.jpg');">
       <div class="box">
         <div class="lead-hello">
           <div class="lead__item">
@@ -113,7 +114,7 @@ get_header(); ?>
   </div><!-- /.box -->
 </div><!-- /.movamon -->
 
-<div class="why">
+<div class="why" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/why-bg.jpg');">
   <div class="box">
     <h2>WHY CHOOSE US</h2>
     <div class="why-list">
@@ -262,7 +263,7 @@ get_header(); ?>
 
     </div>
 </div>
-<div class="reviews">
+<div class="reviews" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/reviews-bg.jpg');">
   <div class="box">
     <h2>CUSTOMERS REVIEWS</h2>
     <div class="reviews-wrap">
@@ -281,7 +282,7 @@ get_header(); ?>
         <div id="reviews-box" class="owl-carousel owl-theme">
 <div class="reviews__item">
   <div class="reviews-box">
-    <div class="reviews__header">
+    <div class="reviews__header" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/reviews/reviews-bg.png');">
       <div class="reviews__header-box">
         <div class="profile">
           <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
@@ -297,7 +298,7 @@ get_header(); ?>
 </div><!-- /.reviews__item -->
 <div class="reviews__item">
   <div class="reviews-box">
-    <div class="reviews__header">
+    <div class="reviews__header" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/reviews/reviews-bg.png');">
       <div class="reviews__header-box">
         <div class="profile">
           <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
@@ -313,7 +314,7 @@ get_header(); ?>
 </div><!-- /.reviews__item -->
 <div class="reviews__item">
   <div class="reviews-box">
-    <div class="reviews__header">
+    <div class="reviews__header" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/reviews/reviews-bg.png');">
       <div class="reviews__header-box">
         <div class="profile">
           <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
@@ -329,7 +330,7 @@ get_header(); ?>
 </div><!-- /.reviews__item -->
 <div class="reviews__item">
   <div class="reviews-box">
-    <div class="reviews__header">
+    <div class="reviews__header" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/reviews/reviews-bg.png');">
       <div class="reviews__header-box">
         <div class="profile">
           <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/reviews/photo.png" alt=""></div>
@@ -384,7 +385,7 @@ get_header(); ?>
   </div><!-- /.box -->
 </div><!-- /.ourpartner -->
 
-<div class="locations">
+<div class="locations" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/locations-bg.jpg');">
   <div class="box">
     <div class="box-title">
       <h2>LOCATIONS</h2>
@@ -505,64 +506,33 @@ get_header(); ?>
     <h2>BLOG</h2>
     <div class="blog-list">
 
-      <a href="#" class="post__item">
-        <div class="blog__post blog__post1">
+    <?php
+    $temp = $wp_query; $wp_query= null;
+    $wp_query = new WP_Query(); $wp_query->query('showposts=4' . '&paged='.$paged);
+    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+      <a href="<?php the_permalink(); ?>" class="post__item">
+        <div class="blog__post" id="post-<?php the_ID(); ?>" style="background-image: url('<?php echo get_field('post_bg_img-blog'); ?>');">
           <div class="blog__card">
             <div class="blog__post-header">
-              <h3>Addiction When Gambling<br>Becomes A Problem.</h3>
+              <h3><?php the_title(); ?></h3>
             </div><!-- /.blog__post-header -->
             <div class="blog__post-footer">
-              <div class="post-date">25.12.2016</div><!-- /.post-date -->
+              <div class="post-date" title="at <?php the_time() ?>"><?php the_time('m.d.y') ?></div><!-- /.post-date -->
             </div><!-- /.blog__post-footer -->
           </div><!-- /.blog__card -->
         </div><!-- /.blog__post blog__post1 -->
       </a>
 
-      <a href="#" class="post__item">
-        <div class="blog__post blog__post2">
-          <div class="blog__card">
-            <div class="blog__post-header">
-              <h3>Myspace Layouts <br>The Missing Element.</h3>
-            </div><!-- /.blog__post-header -->
-            <div class="blog__post-footer">
-              <div class="post-date">25.12.2016</div><!-- /.post-date -->
-            </div><!-- /.blog__post-footer -->
-          </div><!-- /.blog__card -->
-        </div><!-- /.blog__post blog__post2 -->
-      </a>
+      <?php endwhile;?>
 
-      <a href="#" class="post__item">
-        <div class="blog__post blog__post3">
-          <div class="blog__card">
-            <div class="blog__post-header">
-              <h3>Party Jokes Startling <br>But Unnecessary.</h3>
-            </div><!-- /.blog__post-header -->
-            <div class="blog__post-footer">
-              <div class="post-date">25.12.2016</div><!-- /.post-date -->
-            </div><!-- /.blog__post-footer -->
-          </div><!-- /.blog__card -->
-        </div><!-- /.blog__post blog__post3 -->
-      </a>
-
-      <a href="#" class="post__item">
-        <div class="blog__post blog__post4">
-          <div class="blog__card">
-            <div class="blog__post-header">
-              <h3>Addiction When Gambling<br>Becomes A Problem.</h3>
-            </div><!-- /.blog__post-header -->
-            <div class="blog__post-footer">
-              <div class="post-date">25.12.2016</div><!-- /.post-date -->
-            </div><!-- /.blog__post-footer -->
-          </div><!-- /.blog__card -->
-        </div><!-- /.blog__post blog__post4 -->
-      </a>
     </div><!-- /.blog-list -->
-    <div class="more-post"><a href="" class="gotoblog">More</a></div>
+    <div class="more-post"><a href="/blog" class="gotoblog">More</a></div>
 
   </div><!-- /.box -->
 </div><!-- /.blogposts -->
 
-<div class="getfreeq">
+<div class="getfreeq" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/get-bg.jpg');">
   <div class="box">
     <div class="box-title">
       <h2>GET A <span>FREE QUOTE</span></h2>

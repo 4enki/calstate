@@ -1,3 +1,10 @@
+<?php
+/**
+ * Template Name: Calculator page
+ */
+
+get_header(); ?>
+
 <div class="page-wrapper">
     <div class="box">
         <div class="calculator-page">
@@ -435,3 +442,5 @@
         </div><!-- /.calculator-page -->
     </div><!-- /.box -->
 </div><!-- /.page-wrapper -->
+
+<?php get_footer(); ?>

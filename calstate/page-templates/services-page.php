@@ -57,7 +57,7 @@ get_header(); ?>
           </div><!-- /.card__item -->
 
           <div class="card__item">
-            <a href="">
+            <a href="/moving-services/international/">
               <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/3.png');">
                 <div class="card__description">
                   <div class="card__description-header">
@@ -72,7 +72,7 @@ get_header(); ?>
           </div><!-- /.card__item -->
 
           <div class="card__item">
-            <a href="">
+            <a href="/moving-services/moving-labor/">
               <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/4.png');">
                 <div class="card__description">
                   <div class="card__description-header">
@@ -87,7 +87,7 @@ get_header(); ?>
           </div><!-- /.card__item -->
 
           <div class="card__item">
-            <a href="">
+            <a href="/moving-services/commercial-moving/">
               <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/5.png');">
                 <div class="card__description">
                   <div class="card__description-header">
@@ -102,20 +102,22 @@ get_header(); ?>
           </div><!-- /.card__item -->
 
           <div class="card__item">
-            <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/6.png');">
-              <div class="card__description">
-                <div class="card__description-header">
-                  <h2>Corporate Relocation</h2>
-                </div><!-- /.card__description-header -->
-                <div class="card__description-text">
-                  <p>Many say LINUX is far better because it started as an Open Source software.</p>
-                </div><!-- /.card__description-text -->
-              </div><!-- /.card__description -->
-            </div><!-- /.card-box -->
+            <a href="/moving-services/corporate-relocation/">
+                <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/6.png');">
+                  <div class="card__description">
+                    <div class="card__description-header">
+                      <h2>Corporate Relocation</h2>
+                    </div><!-- /.card__description-header -->
+                    <div class="card__description-text">
+                      <p>Many say LINUX is far better because it started as an Open Source software.</p>
+                    </div><!-- /.card__description-text -->
+                  </div><!-- /.card__description -->
+                </div><!-- /.card-box -->
+            </a>
           </div><!-- /.card__item -->
 
           <div class="card__item">
-            <a href="">
+            <a href="/moving-services/government-and-military-moving/">
               <div class="card-box" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/services/7.png');">
                 <div class="card__description">
                   <div class="card__description-header">

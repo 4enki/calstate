@@ -23,6 +23,15 @@ $(document).ready(function() {
   });
   // /спойлер-блок на странице faq
 
+  // спойлер-блок на странице careers
+  $('.careers__item .careers__q').on('click',function() {
+      $(".careers__q").removeClass("careers__q-open");
+      $('.careers__content').removeClass('careers__content-open');
+      $(this).addClass("careers__q-open");
+      $(this).next('.careers__content').addClass('careers__content-open');
+  });
+  // /спойлер-блок на странице careers
+
   // спрятать блок обратной связи на странице с картой
   $('._contacts__form-close').click(function(){
     $('._contacts__form').toggleClass("contacts__form-hide").next();
